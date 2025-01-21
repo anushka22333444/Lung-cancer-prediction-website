@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.5s ease-out;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .alert {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-warning {
+            color: #856404;
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+
+        p {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 25px;
+            color: #555;
+        }
+
+        .consult-doctor {
+            color: #dc3545;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .consult-doctor:hover {
+            color: #b22222;
+            text-decoration: underline;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .lung-image {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color-glass/48/lungs.png">
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Prediction Results</h1>
+        {% if outcome == 'Low' %}
+            <div class="alert alert-success" role="alert">
+                The predicted level of Lung Cancer is Low.<br>
+                <h3 style="color: green;"><b><i><u>Reason:</u></i></b></h3>
+                Oxygen levels, appetite, and overall physical activity are high or normal.
+                Fatigue, cough, or shortness of breath are low or absent.
+            </div>
+        {% elif outcome == 'Medium' %}
+            <div class="alert alert-warning" role="alert">
+                The predicted level of Lung Cancer is Medium.<BR>
+                    <h3 style="color: dark yellow;"><b><i><u>Reason:</u></i></b></h3>
+                Mild fatigue, occasional cough, or moderate shortness of breath are increasing.
+                Smoking history or mild weight loss are present but not severe.
+            </div>
+        {% else %}
+            <div class="alert alert-danger" role="alert">
+                The predicted level of Lung Cancer is High.<br>
+                <h3 style="color: red;"><b><i><u>Reason:</u></i></b></h3>
+                Persistent cough, severe shortness of breath, significant weight loss, or chest pain are increasing significantly.
+                Factors like blood in sputum, family history of lung cancer, or exposure to harmful substances are prominently high.
+            </div>
+        {% endif %}
+        <p>If you have any concerns about your lung health, please consult a doctor.</p>
+        <p>Click <a href="https://www.google.com/maps/search/lung+cancer+doctors/" class="consult-doctor">here</a> to find a doctor near you.</p>
+        <img src="https://img.icons8.com/ios-filled/100/lungs.png" alt="Lung Health" class="lung-image">
+    </div>
+</body>
+</html>

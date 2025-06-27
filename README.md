@@ -15,9 +15,9 @@ A high-accuracy (99.67%) machine learning system for predicting lung cancer risk
 ## Screenshots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/aa1b9974-47a8-4161-8fbe-426d22a62f4b" width="45%" alt="Form Screenshot">
-  <img src="https://github.com/user-attachments/assets/e1d8fb0a-fa56-4f2b-b07b-c2a81cd89cc1" width="45%" alt="Results Screenshot">
-  <img src="https://github.com/user-attachments/assets/1b18fb97-0255-470b-9e4e-db4437c5256e" width="45%" alt="Full Workflow">
+  <img src="https://github.com/user-attachments/assets/aa1b9974-47a8-4161-8fbe-426d22a62f4b" width="60%" alt="Form Screenshot">
+  <img src="https://github.com/user-attachments/assets/e1d8fb0a-fa56-4f2b-b07b-c2a81cd89cc1" width="60%" alt="Results Screenshot">
+  <img src="https://github.com/user-attachments/assets/1b18fb97-0255-470b-9e4e-db4437c5256e" width="60%" alt="Full Workflow">
 </div>
 
 ## Installation

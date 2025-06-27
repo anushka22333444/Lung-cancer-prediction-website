@@ -4,9 +4,12 @@ This repository contains a lung cancer prediction system that achieves an impres
 
 ## Screenshots
 <p align="center">
-  <img src="/screenshots/home.JPG" alt="Home">
-  <img src="/screenshots/form.JPG" alt="Form">
-  <img src="/screenshots/results.JPG" alt="Results">
+![Screenshot 2025-06-27 203207](https://github.com/user-attachments/assets/aa1b9974-47a8-4161-8fbe-426d22a62f4b)
+![Screenshot 2025-06-27 203222](https://github.com/user-attachments/assets/e1d8fb0a-fa56-4f2b-b07b-c2a81cd89cc1)
+![Screenshot 2025-06-27 203247](https://github.com/user-attachments/assets/1b18fb97-0255-470b-9e4e-db4437c5256e)
+
+
+
 </p>
 
 ## Usage
